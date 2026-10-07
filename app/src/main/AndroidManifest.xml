@@ -7,7 +7,7 @@
         android:allowBackup="true">
 
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity
             android:exported="true">
 
             <intent-filter>
