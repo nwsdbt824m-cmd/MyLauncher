@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://android.com"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0D0E15"
+    android:padding="24dp">
+
+    <!-- Заголовок экрана -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ВЫБОР СЕРВЕРА"
+        android:textColor="#00F5D4"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="32dp" />
+
+    <!-- ЕДИНСТВЕННЫЙ СЕРВЕР (KALIMANGI) -->
+    <LinearLayout
+        android:id="@+id/server_kalimangi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:drawable/dialog_holo_dark_frame"
+        android:backgroundTint="#1A1B26"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KIBER RUSSIA | KALIMANGI"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Онлайн: 984 / 1000"
+            android:textColor="#FF9F1C"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+</LinearLayout>
