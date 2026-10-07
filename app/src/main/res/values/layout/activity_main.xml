@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://android.com"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D0E15"
+    android:padding="24dp">
+
+    <!-- Крупные стильные часы по центру экрана -->
+    <TextClock
+        android:id="@+id/launcher_clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:format12Hour="hh:mm"
+        android:format24Hour="HH:mm"
+        android:textColor="#00F5D4"
+        android:textSize="64sp"
+        android:textStyle="bold" />
+
+    <!-- Подпись с датой под часами -->
+    <TextClock
+        android:id="@+id/launcher_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/launcher_clock"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:format12Hour="EEEE, d MMMM"
+        android:format24Hour="EEEE, d MMMM"
+        android:textColor="#9D4EDD"
+        android:textSize="18sp" />
+
+    <!-- Кнопка снизу для открытия всех приложений -->
+    <Button
+        android:id="@+id/btn_apps"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#9D4EDD"
+        android:text="ВСЕ ПРИЛОЖЕНИЯ"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
