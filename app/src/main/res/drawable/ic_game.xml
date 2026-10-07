@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://android.com"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+
+    <!-- Глубокий темный фон круглой иконки -->
+    <path
+        android:pathData="M24,24m-22,0a22,22 0,1 1,44 0a22,22 0,1 1,-44 0"
+        android:fillColor="#0D0E15"/>
+
+    <!-- Внешнее фиолетовое неоновое кольцо -->
+    <path
+        android:pathData="M24,24m-20,0a20,20 0,1 1,40 0a20,20 0,1 1,-40 0"
+        android:strokeColor="#9D4EDD"
+        android:strokeWidth="1.5"
+        android:fillColor="#00000000"/>
+
+    <!-- Геометрический контур короны лидера (в стиле KIBER RUSSIA) -->
+    <path
+        android:pathData="M14,32 L16,20 L21,25 L24,16 L27,25 L32,20 L34,32 Z"
+        android:fillColor="#00F5D4"/>
+
+    <!-- Внутреннее яркое бирюзовое свечение -->
+    <path
+        android:pathData="M18,30 L24,22 L30,30 Z"
+        android:fillColor="#3F00FF"
+        android:fillAlpha="0.5"/>
+</vector>
