@@ -3,7 +3,7 @@
 
     <application
         android:theme="@style/Theme.MyLauncher"
-        android:label="MyLauncher"
+        android:label="KIBER RUSSIA"
         android:allowBackup="true">
 
         <activity
