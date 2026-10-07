@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyLauncher">
 
-        <!-- 1. Главный экран (Часы и кнопка) -->
+        <!-- 1. Главный экран (Часы и кнопка перехода к серверам) -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -19,12 +19,12 @@
             </intent-filter>
         </activity>
 
-        <!-- 2. Экран выбора единственного сервера Kalimangi -->
+        <!-- 2. Экран выбора серверов (Сервер Kalimangi) -->
         <activity
             android:name=".ServersActivity"
             android:exported="false" />
 
-        <!-- 3. Экран авторизации (Никнейм и пароль) -->
+        <!-- 3. Экран авторизации (Ввод никнейма и пароля) -->
         <activity
             android:name=".LoginActivity"
             android:exported="false" />
