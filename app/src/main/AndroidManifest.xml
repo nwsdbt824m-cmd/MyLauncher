@@ -1,23 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://android.com">
 
     <application
-        android:theme="@style/Theme.MyLauncher"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
         android:label="KIBER RUSSIA"
-        android:allowBackup="true">
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyLauncher">
 
+        <!-- 1. Главный экран (Часы и кнопка выбора сервера) -->
         <activity
-            android:name=".LoginActivity
+            android:name=".MainActivity"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-                <category android:name="android.intent.category.HOME" />
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-
         </activity>
+
+        <!-- 2. Экран выбора серверов (Сервер Kalimangi) -->
+        <activity
+            android:name=".ServersActivity"
+            android:exported="false" />
+
+        <!-- 3. Экран авторизации (Ввод никнейма и пароля с памятью) -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
 
     </application>
 
