@@ -1,41 +1,34 @@
 package com.mylauncher
 
-import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
-import android.graphics.Color
-import android.view.Gravity
-import android.widget.LinearLayout
-import android.widget.TextView
+import android.widget.Button
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : Activity() {
+class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+        super.super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
-        val layout = LinearLayout(this).apply {
-            orientation = LinearLayout.VERTICAL
-            gravity = Gravity.CENTER
-            setBackgroundColor(Color.rgb(20, 20, 25))
-            setPadding(40, 40, 40, 40)
+        // Находим нашу кнопку с неоновой иконкой по ID из XML
+        val btnApps = findViewById<Button>(R.id.btn_apps)
+
+        // Настраиваем действие при нажатии на кнопку
+        btnApps.setOnClickListener {
+            // Уникальный ID вашего приложения KIBER RUSSIA
+            val gamePackageName = "com.mylauncher" 
+
+            val launchIntent: Intent? = packageManager.getLaunchIntentForPackage(gamePackageName)
+
+            if (launchIntent != null) {
+                // Если приложение установлено на телефоне, запускаем его
+                startActivity(launchIntent)
+            } else {
+                // Если приложение не найдено, показываем стильную подсказку
+                Toast.makeText(this, "Приложение KIBER RUSSIA не установлено на устройстве", Toast.LENGTH_LONG).show()
+            }
         }
-
-        val title = TextView(this).apply {
-            text = "MY LAUNCHER"
-            textSize = 32f
-            setTextColor(Color.WHITE)
-            gravity = Gravity.CENTER
-        }
-
-        val subtitle = TextView(this).apply {
-            text = "Добро пожаловать!"
-            textSize = 18f
-            setTextColor(Color.LTGRAY)
-            gravity = Gravity.CENTER
-        }
-
-        layout.addView(title)
-        layout.addView(subtitle)
-
-        setContentView(layout)
     }
 }
